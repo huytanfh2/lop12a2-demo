@@ -1,0 +1,235 @@
+  <style>
+
+/* định dạng phần nhìn của web theo màng hình khác nhau và tất cả edit, rất quan trọng */
+  html, body {
+  height: 100%;
+}
+
+  body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f4f8ff;
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Nền & ảnh gái anime màu mè 😘 */
+
+.header {
+  display: flex;
+  align-items: center;          /* canh giữa theo chiều dọc */
+  justify-content: center;
+  gap: 100px;                    /* khoảng cách giữa gif & chữ */
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  padding: 32px 20px;
+  text-align: center;
+  color: white;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header-text p {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.gif {
+  width: 150px;        /* chỉnh nhỏ – vừa phải cho sang */
+  height: auto;
+}
+
+.gif {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Định dạng các thứ khác */
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0;
+    }
+    nav a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #ffe4ec;
+      color: #d63384;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1300px;
+      margin: auto;
+    }
+    section h2 {
+      color: #d63384;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .card {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fad0c4;
+       max-width: 700px;
+      border-radius: 14px; /* Bo góc*/ 
+      padding: 33px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+  footer {
+    background: linear-gradient(135deg, #aac8fa, #7aaafa);
+    color: #1e3a8a;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.0rem;
+    margin-top: auto;
+  }
+
+  .cell_img img{
+    width: 100%;          /* chiếm hết chiều ngang ô */
+    max-width: 260px;     /* tăng kích thước ảnh */
+    height: auto;
+    margin: 12px auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.student-list {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+  
+}
+
+.student-list li {
+  background: #ffffff;
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(30,58,138,0.08);
+  font-weight: 500;
+}
+
+/* Làm thanh menu -_- */
+
+.main-nav {
+  background: #ffffff;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #e6edf5,
+    #e2e8f0,
+    #e6edf5
+  );
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  position: relative;
+  display: block;
+  padding: 14px 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: #e0ecff;
+  color: #2563eb;
+  transform: translateY(-3px); /* độ cao khối bay lên */
+  box-shadow: 0 6px 16px rgba(37,99,235,0.25);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 60%;
+  left: 20%;
+}
+
+/* Edit anh -_- */
+
+.edit_anh {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(660px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.edit_anh img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.edit_anh img:hover {
+  transform: scale(1.05);
+}
+
+  </style>
